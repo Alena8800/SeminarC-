@@ -1,4 +1,4 @@
-﻿// Задача 7 HARD по желанию - идет за 2 необязательных 
+﻿// Задача 7
 // Напишите программу,которая принимает на вход целое число любой разрядности 
 // и на выходе показывает вторую цифру слева этого числа или говорит, что такой цифры нет. 
 // Через строку решать нельзя.
@@ -7,25 +7,13 @@
 // 9146548 -> 1
 // 3 -> нет
 
-Console.Write("Введите любое целое число: ");
-int number = Convert.ToInt32(Console.ReadLine());
-
-while (number > 100)
+Console.WriteLine("Введите любое целое число");
+int num = Convert.ToInt32(Console.ReadLine());
+while( num !>= 100)
 {
-    int i = number / 100;
-
-if (i < 100)
-{
-    int number2 = i % 10;
-    System.Console.WriteLine(number2 + "");
+  int num2 = num / 10;  
+  System.Console.WriteLine($"{num2}");
 }
-else
-{
-    System.Console.WriteLine("нет");
-}
-}
-
-
 
 
 
