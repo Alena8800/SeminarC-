@@ -7,13 +7,28 @@
 // 9146548 -> 1
 // 3 -> нет
 
-Console.WriteLine("Введите любое целое число");
-int num = Convert.ToInt32(Console.ReadLine());
-while( num !>= 100)
+int GetThirdRank(int number)
 {
-  int num2 = num / 10;  
-  System.Console.WriteLine($"{num2}");
+    while (number > 99)
+    {
+        number /= 10;
+    }
+    return number % 10;
 }
+Console.WriteLine("Введите число   ");
+int number = Convert.ToInt32(Console.ReadLine());
 
-
+bool ValidateNumber(int number)
+{
+    if (number<9)
+    {
+        System.Console.WriteLine("Второй цифры нет");
+        return false;
+    }
+    return true;
+}
+if (ValidateNumber(number))
+ {
+    System.Console.WriteLine(GetThirdRank (number));
+ }
 
