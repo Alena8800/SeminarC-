@@ -5,23 +5,60 @@
 // 32679 -> 6
 
 
-Console.WriteLine("Введите целое число");
-int num = Convert.ToInt32(Console.ReadLine());
-int num2=num;
-int count=0;
-while (num > 0)
-{
-count++;
-num = num / 10;
-}
-Console.WriteLine($"Разрядность введенного числа {count}");
 
-string res="";
-for (int i=1;i<=count;i++)
-{
-if (i!=count-1)
-res = num2%10 + res ;
-num2=num2/10;
-}
+// int Prompt(string message)
+// {
+//     Console.Write(message);
+//     string value = Console.ReadLine();
+//     int result = Convert.ToInt32(value);
+//     return result;
+// }
 
-Console.WriteLine(res);
+// int GetThirdRank(int number)
+// {
+//     while (number > 999)
+//     {
+//         number /= 10;
+//     }
+//     return number % 10;
+// }
+
+// bool ValidateNumber(int number)
+// {
+//     if (number<1000)
+//     {
+//         System.Console.WriteLine("Третьей цифры нет");
+//         return false;
+//     }
+//     return true;
+// }
+//  int number = Prompt ("Введите число   ");
+//  if (ValidateNumber(number))
+//  {
+//     System.Console.WriteLine(GetThirdRank (number));
+//  }
+
+int GetThirdRank(int number)
+{
+    while (number > 999)
+    {
+        number /= 10;
+    }
+    return number % 10;
+}
+Console.WriteLine("Введите число   ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+bool ValidateNumber(int number)
+{
+    if (number<1000)
+    {
+        System.Console.WriteLine("Третьей цифры нет");
+        return false;
+    }
+    return true;
+}
+if (ValidateNumber(number))
+ {
+    System.Console.WriteLine(GetThirdRank (number));
+ }
