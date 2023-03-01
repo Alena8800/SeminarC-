@@ -7,7 +7,7 @@
 void Distance(int x1, int y1, int x2, int y2,int z1, int z2)
 {
   double n = Math.Sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2)+ (z1 - z2) * (z1 - z2));
-  double B = Math.Round(double n);
+  double B = Math.Round(n);
 
 
   Console.WriteLine($"Расстояние составляет {n}");
