@@ -7,7 +7,7 @@
 void FillArray(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
-        array[i] = new Random().Next(0,20);
+        array[i] = new Random().Next();
 }
 
 void Sum(int[] array)
